@@ -1,0 +1,39 @@
+
+.card {
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+}
+
+.form-card {
+    transition: transform 0.5s ease-in-out;
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.form-container.active .form-card {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.form-container.active .form-card.inactive {
+    position: absolute;
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}

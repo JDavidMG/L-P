@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Empleados - Aeropuerto Internacional</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="styles/empleados.css">
+</head>
+<body>
+    <header id="header"></header>
+
+    <nav id="navbar"></nav>
+
+    <main class="container mt-4">
+        <h1 id="h1-title" class="mb-4">Gestión de Empleados</h1>
+        
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <button id="btn-nuevo-empleado" class="btn btn-primary">Nuevo Empleado</button>
+            </div>
+            <div class="col-md-6">
+                <input type="text" id="buscar-empleado" class="form-control" placeholder="Buscar empleado...">
+            </div>
+        </div>
+
+        <table class="table table-striped table-hover">
+            <thead class="table-primary">
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Cargo</th>
+                    <th>Departamento</th>
+                    <th>Turnos</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="lista-empleados">
+                <!-- Los empleados se cargarán dinámicamente aquí -->
+            </tbody>
+        </table>
+
+        <!-- Modal para Nuevo/Editar Empleado -->
+        <div class="modal fade" id="modal-empleado" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modal-empleado-titulo">Nuevo Empleado</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="form-empleado">
+                            <input type="hidden" id="empleado-id">
+                            <div class="mb-3">
+                                <label for="empleado-nombre" class="form-label">Nombre Completo</label>
+                                <input type="text" class="form-control" id="empleado-nombre" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="empleado-email" class="form-label">Correo Electrónico</label>
+                                <input type="email" class="form-control" id="empleado-email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="empleado-cargo" class="form-label">Cargo</label>
+                                <input type="text" class="form-control" id="empleado-cargo" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="empleado-departamento" class="form-label">Departamento</label>
+                                <select class="form-select" id="empleado-departamento" required>
+                                    <option value="">Seleccione departamento</option>
+                                    <option value="pilotos">Pilotos</option>
+                                    <option value="personal_tierra">Personal de Tierra</option>
+                                    <option value="seguridad">Seguridad</option>
+                                    <option value="administracion">Administración</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="empleado-rol" class="form-label">Rol</label>
+                                <select class="form-select" id="empleado-rol"  required>
+                                    <option value="">Seleccione rol</option>
+                                    <option value="empleado">Empleado</option>
+                                    <option value="supervisor">Supervisor</option>
+                                    <option value="admin">Administrador</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary" id="btn-guardar-empleado">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal para Asignar Turno -->
+        <div class="modal fade" id="modal-turno" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Asignar Turno</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="form-turno">
+                            <input type="hidden" id="turno-empleado-id">
+                            <div class="mb-3">
+                                <label for="turno-fecha" class="form-label">Fecha</label>
+                                <input type="date" class="form-control" id="turno-fecha" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="turno-hora-inicio" class="form-label">Hora de Inicio</label>
+                                <input type="time" class="form-control" id="turno-hora-inicio" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="turno-hora-fin" class="form-label">Hora de Fin</label>
+                                <input type="time" class="form-control" id="turno-hora-fin" required>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary" id="btn-guardar-turno">Guardar Turno</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal para Mensajes -->
+<div class="modal fade" id="modal-mensaje" tabindex="-1" aria-labelledby="modal-mensaje-label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal-mensaje-label">Mensaje</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="modal-mensaje-body">
+                <!-- Mensaje se añadirá aquí -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </main>
+
+    <footer id="footer"></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/empleados.js"></script>
+    <script src="/services/auth.js"></script>
+</body>
+</html>

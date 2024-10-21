@@ -1,0 +1,69 @@
+/* empleados.css */
+
+/* Estilo general */
+body {
+    background-color: #f8f9fa; /* Color de fondo suave */
+}
+
+#h1-title {
+    font-size: 2rem;
+    color: #007bff; /* Color azul */
+    text-align: center;
+}
+
+/* Estilo para el botón Nuevo Empleado */
+#btn-nuevo-empleado {
+    background-color: #28a745; /* Color verde */
+    color: white;
+}
+
+#btn-nuevo-empleado:hover {
+    background-color: #218838; /* Verde más oscuro al pasar el mouse */
+}
+
+/* Estilo para la tabla */
+.table {
+    background-color: white; /* Fondo blanco para la tabla */
+    border-radius: 0.5rem; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.table th {
+    background-color: #007bff; /* Color azul para el encabezado */
+    color: white;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f2f2f2; /* Color gris claro para filas impares */
+}
+
+/* Estilo para los modales */
+.modal-content {
+    border-radius: 0.5rem; /* Bordes redondeados para el modal */
+}
+
+.modal-header {
+    background-color: #007bff; /* Color azul para el encabezado del modal */
+    color: white;
+}
+
+.modal-footer .btn {
+    border-radius: 0.3rem; /* Bordes redondeados para botones del modal */
+}
+
+/* Estilo para el campo de búsqueda */
+#buscar-empleado {
+    border-radius: 0.5rem; /* Bordes redondeados */
+}
+
+/* Estilo para los mensajes del modal */
+#modal-mensaje-body {
+    font-size: 1rem; /* Tamaño de fuente del mensaje */
+    color: #333; /* Color del texto del mensaje */
+    text-align: center; /* Centrar el texto del mensaje */
+}
+
+/* Estilo de la fila de la tabla al pasar el mouse */
+.table-hover tbody tr:hover {
+    background-color: #e9ecef; /* Color gris claro al pasar el mouse */
+}

@@ -1,0 +1,40 @@
+.header-gradient {
+    background: linear-gradient(135deg, #007bff, #0056b3); /* Degradado de azul */
+    position: relative;
+    overflow: hidden;
+    transition: background 0.5s ease; /* Transición suave del fondo */
+}
+
+.header-gradient:hover {
+    background: linear-gradient(135deg, #0056b3, #003f7f); /* Degradado más oscuro al pasar el ratón */
+}
+
+.header-gradient h1 {
+    animation: fadeIn 1s ease; /* Animación de entrada */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px); /* Mover hacia arriba */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Regresar a la posición original */
+    }
+}
+
+#user-info {
+    animation: slideIn 1s ease; /* Animación de entrada para el usuario */
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(10px); /* Mover hacia la derecha */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); /* Regresar a la posición original */
+    }
+}

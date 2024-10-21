@@ -1,0 +1,72 @@
+body {
+    background-color: #f8f9fa; /* Color de fondo suave */
+}
+
+#h1-title {
+    font-size: 2rem;
+    color: #007bff; /* Color azul */
+    text-align: center;
+}
+
+label {
+    font-weight: bold; /* Etiquetas en negrita */
+}
+
+.form-control {
+    border-radius: 0.5rem; /* Bordes redondeados en los campos de formulario */
+    border: 1px solid #ced4da; /* Color de borde gris claro */
+}
+
+.form-select {
+    border-radius: 0.5rem; /* Bordes redondeados en el selector */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Color del botón principal */
+    border-color: #007bff; /* Color del borde del botón */
+    transition: background-color 0.3s; /* Efecto de transición suave */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Color más oscuro en hover */
+    border-color: #0056b3; /* Color del borde en hover */
+}
+
+.btn-success {
+    background-color: #28a745; /* Color del botón de éxito */
+    border-color: #28a745; /* Color del borde del botón */
+    transition: background-color 0.3s; /* Efecto de transición suave */
+}
+
+.btn-success:hover {
+    background-color: #218838; /* Color más oscuro en hover */
+    border-color: #1e7e34; /* Color del borde en hover */
+}
+
+#resultado-disponibilidad {
+    border: 1px solid #ced4da; /* Borde gris claro */
+    border-radius: 0.5rem; /* Bordes redondeados */
+    padding: 1rem; /* Relleno interno */
+    background-color: #ffffff; /* Fondo blanco */
+}
+
+#formulario-reserva {
+    border: 1px solid #ced4da; /* Borde gris claro */
+    border-radius: 0.5rem; /* Bordes redondeados */
+    padding: 1rem; /* Relleno interno */
+    background-color: #ffffff; /* Fondo blanco */
+}
+
+/* Animación para mostrar y ocultar formularios */
+.fade-in {
+    animation: fadeIn 0.5s; /* Animación de desvanecimiento */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Comienza invisible */
+    }
+    to {
+        opacity: 1; /* Termina visible */
+    }
+}

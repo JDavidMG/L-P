@@ -1,0 +1,68 @@
+body {
+    background-color: #f8f9fa; /* Color de fondo suave */
+}
+
+#h1-title {
+    font-size: 2rem;
+    color: #007bff; /* Color azul */
+    text-align: center;
+}
+
+label {
+    font-weight: bold; /* Etiquetas en negrita */
+}
+
+.form-control,
+.form-select {
+    border-radius: 0.5rem; /* Bordes redondeados en los campos de formulario */
+    border: 1px solid #ced4da; /* Color de borde gris claro */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Color del botón principal */
+    border-color: #007bff; /* Color del borde del botón */
+    transition: background-color 0.3s; /* Efecto de transición suave */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Color más oscuro en hover */
+    border-color: #0056b3; /* Color del borde en hover */
+}
+
+#loading-indicator {
+    margin-top: 20px; /* Margen superior */
+}
+
+#resultados-vuelos {
+    border: 1px solid #ced4da; /* Borde gris claro */
+    border-radius: 0.5rem; /* Bordes redondeados */
+    padding: 1rem; /* Relleno interno */
+    background-color: #ffffff; /* Fondo blanco */
+}
+
+.modal-header {
+    background-color: #007bff; /* Color del encabezado del modal */
+    color: #ffffff; /* Texto blanco para el encabezado del modal */
+}
+
+.modal-body {
+    background-color: #f8f9fa; /* Fondo suave para el cuerpo del modal */
+}
+
+.modal-footer {
+    background-color: #f8f9fa; /* Fondo suave para el pie del modal */
+}
+
+/* Animación para mostrar y ocultar formularios */
+.fade-in {
+    animation: fadeIn 0.5s; /* Animación de desvanecimiento */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Comienza invisible */
+    }
+    to {
+        opacity: 1; /* Termina visible */
+    }
+}

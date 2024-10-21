@@ -1,0 +1,44 @@
+.navbar-gradient {
+    background: linear-gradient(135deg, #007bff, #0056b3); /* Degradado de azul */
+    position: relative;
+    z-index: 1000; /* Asegura que el navbar esté por encima de otros elementos */
+}
+
+.navbar-nav .nav-link {
+    color: white; /* Color de los enlaces */
+    transition: color 0.3s ease; /* Transición suave del color */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffc107; /* Cambia a amarillo al pasar el ratón */
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5); /* Color del borde del toggler */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30' fill='none' stroke='white' stroke-width='3'%3E%3Cpath stroke-linecap='round' d='M5 7h20M5 15h20M5 23h20'/%3E%3C/svg%3E"); /* Icono del toggler en blanco */
+}
+
+.nav-item {
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards; /* Animación de entrada para los elementos del navbar */
+}
+
+.nav-item:nth-child(1) { animation-delay: 0.1s; }
+.nav-item:nth-child(2) { animation-delay: 0.2s; }
+.nav-item:nth-child(3) { animation-delay: 0.3s; }
+.nav-item:nth-child(4) { animation-delay: 0.4s; }
+.nav-item:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px); /* Mover hacia arriba */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Regresar a la posición original */
+    }
+}

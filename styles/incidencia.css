@@ -1,0 +1,72 @@
+body {
+    background-color: #f8f9fa; /* Color de fondo suave */
+}
+
+#h1-title {
+    font-size: 2rem;
+    color: #007bff; /* Color azul */
+    text-align: center;
+}
+
+#btn-nueva-incidencia {
+    margin-top: 20px; /* Espaciado superior para el botón de nueva incidencia */
+}
+
+.table {
+    margin-top: 20px; /* Espaciado superior para la tabla */
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f2f2f2; /* Color de fondo alternativo para filas impares */
+}
+
+.table-primary {
+    background-color: #007bff; /* Color del encabezado de la tabla */
+    color: #ffffff; /* Texto blanco para el encabezado */
+}
+
+.table-hover tbody tr:hover {
+    background-color: #e9ecef; /* Color de fondo al pasar el mouse */
+}
+
+.modal-header {
+    background-color: #007bff; /* Color del encabezado del modal */
+    color: #ffffff; /* Texto blanco para el encabezado del modal */
+}
+
+.modal-body {
+    background-color: #ffffff; /* Fondo blanco para el cuerpo del modal */
+}
+
+.modal-footer {
+    background-color: #f8f9fa; /* Fondo suave para el pie del modal */
+}
+
+.form-label {
+    font-weight: bold; /* Etiquetas en negrita */
+}
+
+.form-control,
+.form-select {
+    border-radius: 0.5rem; /* Bordes redondeados en los campos de formulario */
+    border: 1px solid #ced4da; /* Color de borde gris claro */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Color del botón principal */
+    border-color: #007bff; /* Color del borde del botón */
+    transition: background-color 0.3s; /* Efecto de transición suave */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Color más oscuro en hover */
+    border-color: #0056b3; /* Color del borde en hover */
+}
+
+.toast-container {
+    z-index: 1050; /* Asegúrate de que las notificaciones se muestren sobre otros elementos */
+}
+
+#buscar-incidencia {
+    margin-top: 20px; /* Espaciado superior para el campo de búsqueda */
+}
